@@ -62,6 +62,21 @@ export interface PaymentJsonData {
   age?: string;
   name?: string;
   phone?: string;
+  CloudPayments?: {
+    CustomerReceipt: {
+      email: null | string;
+      phone: string;
+      Items: {
+        amount: number;
+        label: string;
+        method: number;
+        object: number;
+        price: string;
+        quantity: string;
+        vat: null;
+      }[];
+    };
+  };
 }
 
 export interface Configuration {

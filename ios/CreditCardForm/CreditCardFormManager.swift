@@ -11,7 +11,7 @@ class CreditCardFormManager: NSObject {
   public static var reject: RCTPromiseRejectBlock?;
 
   @objc
-  func initialPaymentData (_ paymentData: Dictionary<String, String>, jsonData: Dictionary<String, String>?) -> Void {
+  func initialPaymentData (_ paymentData: Dictionary<String, String>, jsonData: Dictionary<String, Any>?) -> Void {
     let initialData = PAYMENT_DATA(paymentData: paymentData, jsonData: jsonData);
 
     self.paymentData = PaymentData.init(publicId: initialData.publicId)
